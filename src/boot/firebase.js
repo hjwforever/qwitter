@@ -1,6 +1,9 @@
 import firebase from "firebase/app"
 import "firebase/firestore"
-require('dotenv').config()
+
+const dotenv = require('dotenv');
+dotenv.config();
+
 
 const firebaseConfig = {
   // YOUR CONFIG BELOW ALL
@@ -13,6 +16,8 @@ const firebaseConfig = {
   measurementId: "G-GE98D94DPF"
 }
 
+console.log(process.env.BASE_URL);
+console.log(firebaseConfig.apiKey);
 firebase.initializeApp(firebaseConfig)
 
 let db = firebase.firestore()

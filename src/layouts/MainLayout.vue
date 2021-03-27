@@ -1,6 +1,5 @@
 <template>
   <q-layout view="lHr lpR fFf">
-
     <q-header bordered class="bg-white text-black">
       <q-toolbar>
         <q-btn dense flat round icon="menu" @click="left = !left" />
@@ -14,51 +13,30 @@
             color="primary"
           />
         </q-toolbar-title>
-
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="left"
-      side="left"
-      :width="283"
-      bordered
-      show-if-above
-    >
-      <q-icon
-        class="q-pa-md"
-        name="fas fa-dove"
-        size="lg"
-        color="primary"
-      />
+    <q-drawer v-model="left" side="left" :width="283" bordered show-if-above>
+      <q-icon class="q-pa-md" name="fas fa-dove" size="lg" color="primary" />
 
       <q-list>
-        <q-item
-          to="/"
-          v-ripple
-          clickable
-          exact
-        >
+        <q-item to="/" v-ripple clickable exact>
           <q-item-section avatar>
             <q-icon name="home" size="md" />
           </q-item-section>
 
           <q-item-section class="text-h6 text-weight-bold">Home</q-item-section>
         </q-item>
-        <q-item
-          to="/about"
-          v-ripple
-          clickable
-          exact
-        >
+        <q-item to="/about" v-ripple clickable exact>
           <q-item-section avatar>
             <q-icon name="help" size="md" />
           </q-item-section>
 
-          <q-item-section class="text-h6 text-weight-bold">About</q-item-section>
+          <q-item-section class="text-h6 text-weight-bold"
+            >About</q-item-section
+          >
         </q-item>
       </q-list>
-
     </q-drawer>
 
     <q-drawer show-if-above v-model="right" side="right" bordered>
@@ -74,15 +52,17 @@
         </template>
       </q-input>
 
-      <q-list
-        separator
-        padding
-      >
+      <q-list separator padding>
         <q-item class="q-pa-md">
           <q-item-section>
             <q-item-label overline class="text-grey">Education</q-item-label>
-            <q-item-label class="text-weight-bold">Something amazing happened!</q-item-label>
-            <q-item-label caption>Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.</q-item-label>
+            <q-item-label class="text-weight-bold"
+              >Something amazing happened!</q-item-label
+            >
+            <q-item-label caption
+              >Secondary line text. Lorem ipsum dolor sit amet, consectetur
+              adipiscit elit.</q-item-label
+            >
           </q-item-section>
 
           <q-item-section side top>
@@ -92,8 +72,13 @@
         <q-item class="q-pa-md">
           <q-item-section>
             <q-item-label overline class="text-grey">Education</q-item-label>
-            <q-item-label class="text-weight-bold">Something amazing happened!</q-item-label>
-            <q-item-label caption>Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.</q-item-label>
+            <q-item-label class="text-weight-bold"
+              >Something amazing happened!</q-item-label
+            >
+            <q-item-label caption
+              >Secondary line text. Lorem ipsum dolor sit amet, consectetur
+              adipiscit elit.</q-item-label
+            >
           </q-item-section>
 
           <q-item-section side top>
@@ -103,8 +88,13 @@
         <q-item class="q-pa-md">
           <q-item-section>
             <q-item-label overline class="text-grey">Education</q-item-label>
-            <q-item-label class="text-weight-bold">Something amazing happened!</q-item-label>
-            <q-item-label caption>Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.</q-item-label>
+            <q-item-label class="text-weight-bold"
+              >Something amazing happened!</q-item-label
+            >
+            <q-item-label caption
+              >Secondary line text. Lorem ipsum dolor sit amet, consectetur
+              adipiscit elit.</q-item-label
+            >
           </q-item-section>
 
           <q-item-section side top>
@@ -119,19 +109,18 @@
         <router-view />
       </keep-alive>
     </q-page-container>
-
   </q-layout>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       left: false,
-      right: false
-    }
-  }
-}
+      right: false,
+    };
+  },
+};
 </script>
 
 <style lang="sass">
